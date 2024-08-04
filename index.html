@@ -22,50 +22,40 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="stylei.css">
-
-
-
-  <!-- Custom styles for this template -->
- 
-  <link href="carousel.css" rel="stylesheet">
-</head>
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top p-3" style="background-color: rgba(10, 10, 10, 0.4)" id="headerNav">
-  <div class="container-fluid">
-    <!-- Brand logo -->
-    <a class="navbar-brand d-block d-lg-none" href="#">
-      <img src="logo.png" height="40" alt="Logo">
-    </a>
-
-    <!-- Navbar Toggler Button -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Navbar Items -->
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav mx-auto">
-        <li class="nav-item">
-          <a class="nav-link mx-2 active" href="#">Kezdőlap</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link mx-2" href="#rolunk">Rólunk</a>
-        </li>
-        <li class="nav-item d-none d-lg-block">
-          <a class="nav-link mx-2" href="#">
-            <img src="logo.png" height="70" alt="Logo">
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link mx-2" href="#kapcsolat">Kapcsolat</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link mx-2" href="login.html">Jelentkezés</a>
-        </li>
-      </ul>
+    <script src="first.js"></script>
+   
+</head> 
+<header>
+  <nav class="navbar navbar-expand-md fixed-top">
+    <div class="container-fluid">
+     
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mx-auto nav-links">
+          <li class="nav-item active">
+            <a class="nav-link" aria-current="page" href="#">Kezdolap</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#rolunk">Rolunk</a>
+          </li>
+          <img class="logo" src="logo.png" height="60" alt="">
+          <li class="nav-item">
+            <a class="nav-link" href="#kapcsolat">Kapcsolat</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="send.html">Jelentkezes</a>
+          </li>
+        </ul>
+       
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
+</header>
 <body>
   
   <main>
@@ -202,7 +192,19 @@
 
     </div><!-- /.container -->
 
-
+<div>
+  <form class="submit-student-form" action="submit.php" method="post">
+    <h1 class="form-title">Jelentkezes</h1>
+    <label>Nev</label>
+    <input type="text" name="first_name" placeholder="Pelda Tamas" required>
+    <label>Email</label>
+    <input type="email" name="email" placeholder="pelda@pelda.com" required>
+    <label>Telefonszam</label>
+    <input type='tel' name="telephone" placeholder="+36 123456789" required>
+  
+    <button type="submit">Kuldes</button>
+  </form>
+</div>
     <!-- FOOTER -->
     <footer id="kapcsolat" class="container">
       <p class="float-right"><a href="#">Back to top</a></p>
@@ -210,9 +212,7 @@
     </footer>
   </main>
 
- <!-- Start of HubSpot Embed Code -->
-  <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/145156816.js"></script>
-<!-- End of HubSpot Embed Code -->
+
 
 </body>
 
