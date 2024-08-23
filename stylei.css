@@ -30,7 +30,7 @@ html {
   /* Carousel base class */
   .carousel {
     margin-bottom: 4rem;
-   
+   height:200px;
   }
 
   /* Since positioning the image, we need to help out the caption */
