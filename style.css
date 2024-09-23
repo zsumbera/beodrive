@@ -1,39 +1,224 @@
-.back {
-    background: #e2e2e2;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-  }
-  
-  .div-center {
-    width: 400px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior:smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav .btn-cta {
+    background-color: #f90;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.hero {
+    background-image: url('/harmk.jpg');
     height: 400px;
-    background-color: #fff;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    max-width: 100%;
-    max-height: 100%;
-    overflow: auto;
-    padding: 1em 2em;
-    border-bottom: 2px solid #ccc;
-    display: table;
-  }
-  
-  div.content {
-    display: table-cell;
-    vertical-align: middle;
-  }
-  body {
-    animation: grow 1s;
-  }
-  
-  @keyframes grow {
-      0% { transform: scale(.2); }
-    100% { transform: scale(1); }
-  }
-  
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+    border-radius: 40px;
+    padding: 10px;
+    background-color: rgb(0, 0, 0,0.7);
+}
+
+.card {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+#cardsname{
+    color: #000;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    height: 350px;
+    object-fit:contain;
+
+}
+
+.services {
+    padding: 40px;
+}
+
+.course-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#courses{
+    background-color: #f1f1f1;
+}
+.course {
+    width: 300px;
+    
+    background-color: #f7da8b;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #333;
+    color: white;
+}
+
+
+.hero {
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.navbar .btn-warning {
+    font-weight: bold;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+}
+
+footer a {
+    color: #f9c12e;
+}
+
+.course-grid .card {
+    transition: transform 0.3s;
+}
+
+.course-grid .card:hover {
+    transform: scale(1.05);
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    header {
+        flex-direction: column;
+    }
+    .hero .container{
+        width: 80%;
+    }
+    .hero {
+        height: 80vh; 
+        padding: 1rem 0;
+    }
+
+    .hero h1 {
+        font-size: 1.7rem;
+    }
+
+    .hero p {
+        font-size: 1rem; 
+    }
+
+    .hero a {
+        font-size: 1rem; 
+        padding: 8px 20px; 
+    }
+
+    .course-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card img {
+        height: 200px;
+    }
+   
+
+    .card-title {
+        font-size: 1.5rem;
+    }
+
+    .card-text {
+        font-size: 1rem;
+    }
+    .navbar-nav {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+    
+      .navbar-nav .nav-item {
+        text-align: center;
+        width: 100%;
+      }
+    
+      .navbar-brand {
+        text-align: center;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      /* Ensure the button for 'Jelentkezés most' is centered as well */
+      .navbar-collapse {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .btn.ms-lg-3 {
+        margin-top: 10px;
+      }
+      .navbar-toggler{
+        display: flex;
+        justify-content: center;
+       width: 100%;
+      }
+}
